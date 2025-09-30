@@ -1,2 +1,180 @@
-# -Airline-Delay-Cause-Dashboard
+# Airline-Delay-Cause-Dashboard
 This Tableau project analyzes U.S. airline flight delays using public Kaggle data. The dashboard highlights delay causes, airline performance, airport impacts, and time-based trends, giving stakeholders clear insights into why delays happen, where they occur most, and which airlines or airports contribute the most.
+
+
+# ✈️ Airline Delay Cause Dashboard
+
+![Made with Tableau](https://img.shields.io/badge/Made%20with-Tableau-blue?logo=tableau)
+![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-orange)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+
+---
+
+## 1. Introduction
+
+This project analyzes airline flight delays using Tableau. The dashboard highlights the main causes of delays, airline performance, airport impacts, and overall delay trends over time.
+
+**Purpose:**
+
+- To identify which factors contribute most to delays.  
+- To compare airlines and airports by delay patterns.  
+- To give stakeholders a clear picture of delay behavior for decision-making.  
+
+**Disclaimer:**  
+This project is based on a public dataset and is for learning and demonstration purposes only. It does not represent any specific airline, airport, or government institution.
+
+---
+
+## 2. Problem Statement
+
+The analysis seeks to answer the following key questions:
+
+- What are the main causes of flight delays?  
+- Which airlines contribute the most to delays?  
+- Which airports experience the highest delays?  
+- How do delays vary across time (year, month, season)?  
+
+---
+
+## 3. Skills Demonstrated
+
+This project showcases the following Tableau concepts:
+
+- Pivoting & calculated fields  
+- KPI cards for high-level metrics  
+- Dual-axis chart trick (donut visualization)  
+- Interactive filters & actions (slicers)  
+- Maps with geographic hierarchies  
+- Dashboard design with custom background  
+
+---
+
+## 4. Data Sourcing
+
+- **Dataset:** Airline_Delay_Cause.csv  
+- Public dataset available via Kaggle.  
+- Contains records of flights, delays, and delay causes.  
+
+---
+
+## 5. Data Transformation
+
+Data preparation steps included:
+
+- Pivoting delay cause columns into a single field.  
+- Creating calculated fields,  
+
+  ```text
+  % Delayed Flights = SUM([arr_del15]) / SUM([arr_flights])
+- Percentage of Delayed Flights
+% Delayed Flights = SUM([arr_del15]) / SUM([arr_flights])
+
+- Month Name (from numeric month)
+  ```text
+  Month Name = DATENAME('month', MAKEDATE(2000, [Month], 1))
+
+- Year (from Year-Month Date field)
+  ```text
+  Year = YEAR([Year-Month Date])
+
+- Top N Airlines Filter
+INDEX() <= 10
+
+Converting numeric months to proper month names using calculated field:
+
+DATENAME('month', MAKEDATE(2000, [Month], 1))
+
+Creating a Year field from Year-Month Date for hierarchy:
+
+YEAR([Year-Month Date])
+
+Applying Top N filter for airline analysis (Top 10).
+
+
+
+---
+
+## 6. Modeling
+
+Since the dataset is flat, Tableau relationships were minimal. Key modeling included:
+
+- Creating hierarchies (Year → Month → Date).
+
+- Aggregations using calculated fields.
+
+- KPIs combining flight totals and delays.
+
+
+
+---
+
+## 7. Analysis & Visualizations
+
+- The dashboard consists of several visual components:
+
+**KPI Cards**
+
+- Total Flights
+
+- Delayed Flights
+
+- % of Flights Delayed
+
+- Total Delay Minutes
+
+
+**Delay Trends Over Time (Line Chart)**
+
+- Tracks arrival delays across years.
+
+
+**Delays by Airline (Stacked Bar, Top 10)**
+
+- Compares carriers by total delays, color-coded by cause.
+
+
+**Delays by Airport (Map)**
+
+- Shows which airports experience the highest delays geographically.
+
+
+**Donut Chart – Delay Causes Breakdown**
+
+- Displays the percentage share of each delay factor.
+
+
+**Delay Minutes by Cause (Bar Chart)**
+
+- Highlights which causes drive the largest cumulative delay minutes.
+
+
+📸 **Dashboard Preview:**
+(Insert screenshot here)
+
+
+---
+
+## 8. Conclusion & Recommendations
+
+**Insights:**
+
+- Late Aircraft and Carrier delays account for the largest share of delay minutes.
+
+- Weather delays are significant but less dominant compared to operational causes.
+
+- Certain airlines (e.g., Southwest, American, Delta) consistently show higher delays.
+
+- Delay trends peak in some years (2018–2019) and drop during events like 2020.
+
+
+**Recommendations:**
+
+- Airlines should focus on improving turnaround efficiency (Late Aircraft).
+
+- Better carrier resource planning may reduce operational delays.
+
+- Seasonal and weather-prone airports require proactive scheduling strategies.
+
+
+
+---
