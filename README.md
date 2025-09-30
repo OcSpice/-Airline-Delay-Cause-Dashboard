@@ -72,7 +72,8 @@ This project showcases the following Tableau concepts:
   - `arr_flights` → Total flights  
   - `month` → Month of operation (converted from numeric to month name)  
   - `carrier` → Airline code  
-  - `airport` → Airport code  
+  - `airport` → Airport code
+
 ---
 
 ## 5. Data Transformation
@@ -81,11 +82,9 @@ Data preparation steps included:
 
 - Pivoting delay cause columns into a single field.  
 - Creating calculated fields,  
-
+- Percentage of Delayed Flights
   ```text
   % Delayed Flights = SUM([arr_del15]) / SUM([arr_flights])
-- Percentage of Delayed Flights
-% Delayed Flights = SUM([arr_del15]) / SUM([arr_flights])
 
 - Month Name (from numeric month)
   ```text
@@ -95,19 +94,28 @@ Data preparation steps included:
   ```text
   Year = YEAR([Year-Month Date])
 
-- Top N Airlines Filter
-INDEX() <= 10
+- Converting numeric months to proper month names using calculated field:
+  ```text
+  CASE [Month]
+  WHEN 1 THEN "January"
+  WHEN 2 THEN "February"
+  WHEN 3 THEN "March"
+  WHEN 4 THEN "April"
+  WHEN 5 THEN "May"
+  WHEN 6 THEN "June"
+  WHEN 7 THEN "July"
+  WHEN 8 THEN "August"
+  WHEN 9 THEN "September"
+  WHEN 10 THEN "October"
+  WHEN 11 THEN "November"
+  WHEN 12 THEN "December"
+  END
 
-Converting numeric months to proper month names using calculated field:
+- Creating a Month Name field from Month:
+  ```text
+  YEAR([Year-Month Date])
 
-DATENAME('month', MAKEDATE(2000, [Month], 1))
-
-Creating a Year field from Year-Month Date for hierarchy:
-
-YEAR([Year-Month Date])
-
-Applying Top N filter for airline analysis (Top 10).
-
+- Applying Top N filter for airline analysis (Top 10).
 
 
 ---
@@ -121,8 +129,6 @@ Since the dataset is flat, Tableau relationships were minimal. Key modeling incl
 - Aggregations using calculated fields.
 
 - KPIs combining flight totals and delays.
-
-
 
 ---
 
