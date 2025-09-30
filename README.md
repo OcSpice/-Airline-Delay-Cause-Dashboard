@@ -173,7 +173,8 @@ Since the dataset is flat, Tableau relationships were minimal. Key modeling incl
 
 
 📸 **Dashboard Preview:**
-(Insert screenshot here)
+```markdown
+![Dashboard Screenshot](Dashboard/Dashboard%20Screenshot.png)
 
 
 ---
