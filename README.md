@@ -1,8 +1,6 @@
-# Airline-Delay-Cause-Dashboard
+# ✈️ Airline-Delay-Cause-Dashboard
 This Tableau project analyzes U.S. airline flight delays using public Kaggle data. The dashboard highlights delay causes, airline performance, airport impacts, and time-based trends, giving stakeholders clear insights into why delays happen, where they occur most, and which airlines or airports contribute the most.
 
-
-# ✈️ Airline Delay Cause Dashboard
 
 [![Made with Tableau Public](https://img.shields.io/badge/Made%20with-Tableau%20Public-blue?logo=tableau)](https://public.tableau.com/app/profile/ogheneochuko.ogidiagba/viz/AirlineDelayCause_17590191912560/AirlineDelayCause)
 [![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-orange)](https://www.kaggle.com/datasets/sriharshaeedala/airline-delay?resource=download)
