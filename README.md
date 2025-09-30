@@ -4,9 +4,25 @@ This Tableau project analyzes U.S. airline flight delays using public Kaggle dat
 
 # ✈️ Airline Delay Cause Dashboard
 
-![Made with Tableau](https://img.shields.io/badge/Made%20with-Tableau-blue?logo=tableau)
+[![Made with Tableau Public](https://img.shields.io/badge/Made%20with-Tableau%20Public-blue?logo=tableau)](https://public.tableau.com/app/profile/ogheneochuko.ogidiagba/viz/AirlineDelayCause_17590191912560/AirlineDelayCause)
 ![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
+
+---
+
+## 📂 Repository Structure
+Airline-Delay-Dashboard/
+│── README.md   ← Main repo README (overview of the whole project)
+│
+├── Dashboard/
+│   ├── README.md   ← Detailed documentation for this Tableau dashboard
+│   └── Dashboard Screenshot.png
+│
+├── Data/
+│   └── Airline_Delay_Cause.csv
+│
+└── Tableau Files/
+    └── Airline_Delay_Dashboard.twbx
 
 ---
 
@@ -49,12 +65,14 @@ This project showcases the following Tableau concepts:
 
 ---
 
-## 4. Data Sourcing
-
-- **Dataset:** Airline_Delay_Cause.csv  
-- Public dataset available via Kaggle.  
-- Contains records of flights, delays, and delay causes.  
-
+## 4. 📂 Dataset  
+- **Source**: ![Kaggle]
+- **Main fields used**:  
+  - `arr_del15` → Number of delayed flights  
+  - `arr_flights` → Total flights  
+  - `month` → Month of operation (converted from numeric to month name)  
+  - `carrier` → Airline code  
+  - `airport` → Airport code  
 ---
 
 ## 5. Data Transformation
