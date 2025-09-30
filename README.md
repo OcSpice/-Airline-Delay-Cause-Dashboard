@@ -5,7 +5,7 @@ This Tableau project analyzes U.S. airline flight delays using public Kaggle dat
 # ✈️ Airline Delay Cause Dashboard
 
 [![Made with Tableau Public](https://img.shields.io/badge/Made%20with-Tableau%20Public-blue?logo=tableau)](https://public.tableau.com/app/profile/ogheneochuko.ogidiagba/viz/AirlineDelayCause_17590191912560/AirlineDelayCause)
-![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-orange)
+[![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-orange)](https://www.kaggle.com/datasets/sriharshaeedala/airline-delay?resource=download)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
 ---
@@ -66,7 +66,9 @@ This project showcases the following Tableau concepts:
 ---
 
 ## 4. 📂 Dataset  
-- **Source**: ![Kaggle]
+- **Source**: [![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Airline%20Delay%20Dataset-blue)](https://www.kaggle.com/datasets/sriharshaeedala/airline-delay?resource=download)
+
+This dataset contains U.S. airline flight delay records, including flight counts, delay minutes, and categorized delay causes. It was published on Kaggle by **Sriharsha Eedala**.
 - **Main fields used**:  
   - `arr_del15` → Number of delayed flights  
   - `arr_flights` → Total flights  
